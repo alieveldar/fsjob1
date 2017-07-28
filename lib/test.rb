@@ -14,10 +14,11 @@ if digit == row[@n+1]
 	puts "NFROM if #{@n}" 
 else
 	@n = @n + 1
-	puts "N #{@n}"
+	#puts "N #{@n}"
 	@count = 1
-	puts "COUNT FROM ELSE #{@count}"
-	puts "NFROMELSE #{@n}"
+	#puts "COUNT FROM ELSE #{@count}"
+	#puts "NFROMELSE #{@n}"
+	puts "COUNT #{@count}"
 end
 end
 end
