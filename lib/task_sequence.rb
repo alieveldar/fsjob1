@@ -3,6 +3,7 @@ class TaskSequence
 	def initialize(steps)
 		@steps = steps
 		@row = '1'
+		@sequence = Array.new
 	end
 
 	def step(row)
@@ -29,15 +30,16 @@ class TaskSequence
 	end
 
 	def sequence()
+		@steps = @steps.to_i
 	    while @steps != 0
-		print step(@row)
-		puts "   step #{(16-@steps)}"		
-
-		@steps = @steps - 1	
+		@sequence << (step(@row)) 
+		@steps = @steps - 1			
 		end		
+		return @sequence
 	end
 
 end
 
-first = TaskSequence.new(15)
-first.sequence
+
+
+
