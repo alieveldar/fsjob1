@@ -3,7 +3,7 @@ class TaskSequence
 	def initialize(steps)
 		@steps = steps
 		@row = '1'
-		@sequence = Array.new
+		@sequence = Array.new << "1"
 	end
 
 	def step(row)
