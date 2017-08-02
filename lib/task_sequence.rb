@@ -1,19 +1,19 @@
   class TaskSequence
 
-  	def initialize(steps)
-  		@steps = steps
-  		@row = "1"
-  		@sequence = ["1"]
-  	end
+    def initialize(steps)
+      @steps = steps
+      @row = "1"
+      @sequence = ["1"]
+    end
 
-  	def sequence()
-  	 @steps = @steps.to_i
-  	  while @steps != 1
-  		  @sequence << (step(@row)) 
-  		  @steps = @steps - 1			
-  		end		
-  	 return @sequence
-  	end 
+    def sequence
+      @steps = @steps.to_i
+      while @steps != 1
+        @sequence << (step(@row)) 
+        @steps = @steps - 1     
+      end   
+      return @sequence
+    end 
 
     private 
 
@@ -28,20 +28,13 @@
         digit = @row[@n]      
         if digit == @row[@n+1]        
           @count = @count + 1
-          @n = @n +1  
-           
+          @n = @n +1       
         else
           @n = @n + 1
           next_digit << @count.to_s + digit
           @count = 1
         end
       end
-        @row = next_digit.join("")
-        return @row
+        @row = next_digit.join("")        
     end
-
   end
-
-
-
-
