@@ -23,4 +23,7 @@ describe TaskSequence do
   it "should return step 7" do
     expect(TaskSequence.new(7).sequence).to match_array(["1", "11", "21", "1211", "111221", "312211", "13112221"])
   end
+  it "should return step 8" do
+    expect(TaskSequence.new(8).sequence).to match_array(["1", "11", "21", "1211", "111221", "312211", "13112221", "1113213211"])
+  end
 end

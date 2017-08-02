@@ -1,5 +1,4 @@
   class TaskSequence
-
     def initialize(steps)
       @steps = steps
       @row = "1"
